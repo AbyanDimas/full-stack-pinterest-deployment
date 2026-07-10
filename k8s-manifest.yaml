@@ -35,7 +35,7 @@ spec:
           envFrom:
             - secretRef:
                 name: backend-secrets
-          image: abyandimas/full-stack-pinterest-backend:46c3c937bd00404bd6768af979ca21c341d53e5b
+          image: abyandimas/full-stack-pinterest-backend:22d19f68760ded4c094f37eded9553ed86b41101
           imagePullPolicy: Always
           name: backend
           ports:
@@ -137,7 +137,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-        - image: abyandimas/full-stack-pinterest-frontend:46c3c937bd00404bd6768af979ca21c341d53e5b
+        - image: abyandimas/full-stack-pinterest-frontend:22d19f68760ded4c094f37eded9553ed86b41101
           imagePullPolicy: Always
           name: frontend
           ports:
