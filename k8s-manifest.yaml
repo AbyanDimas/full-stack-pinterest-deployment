@@ -35,7 +35,7 @@ spec:
           envFrom:
             - secretRef:
                 name: backend-secrets
-          image: abyandimas/full-stack-pinterest-backend:9375507cacc4bc1247294c2bd208679658f8863a
+          image: abyandimas/full-stack-pinterest-backend:46c3c937bd00404bd6768af979ca21c341d53e5b
           imagePullPolicy: Always
           name: backend
           ports:
@@ -50,7 +50,7 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
-            readOnlyRootFilesystem: true
+            readOnlyRootFilesystem: false
             runAsNonRoot: false
           startupProbe:
             failureThreshold: 3
@@ -137,7 +137,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-        - image: abyandimas/full-stack-pinterest-frontend:9375507cacc4bc1247294c2bd208679658f8863a
+        - image: abyandimas/full-stack-pinterest-frontend:46c3c937bd00404bd6768af979ca21c341d53e5b
           imagePullPolicy: Always
           name: frontend
           ports:
@@ -152,7 +152,7 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
-            readOnlyRootFilesystem: true
+            readOnlyRootFilesystem: false
             runAsNonRoot: false
           startupProbe:
             failureThreshold: 3
